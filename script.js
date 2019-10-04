@@ -25,6 +25,8 @@ appData.expenses.OR = OR1;
 appData.expenses.VO = VO1;
 
 alert(appData.budget / 30);
+console.log(appData.expenses);
+
 
 
 //  //  обязательные расходы = OR if OR == OR1;
