@@ -1,7 +1,18 @@
 "use strict";
 
-let money = +prompt(" Your monthly budget?");
-let time = prompt(" Please enter date in format YYYY-MM-DD");
+let money, time;
+
+
+
+// let money = +prompt(" Your monthly budget?");
+// let time = prompt(" Please enter date in format YYYY-MM-DD");
+function start () {
+ money = +prompt(" Your monthly budget?");
+ time = prompt(" Please enter date in format YYYY-MM-DD");
+} 
+money = +prompt(" Your monthly budget?");
+ time = prompt(" Please enter date in format YYYY-MM-DD");
+
 let appData = {
 budget: money,
 timeData: time,
@@ -85,3 +96,13 @@ if(appData.moneyPerDay < 100) {
 } else {
     console.log("Something goes wrong! ")
 }
+
+
+
+///////////////////
+//Funktion
+function showFirstMessage(text) {
+    alert(text);
+}
+
+showFirstMessage("Hello World ! ");
