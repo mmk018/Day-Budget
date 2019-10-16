@@ -21,7 +21,7 @@ let appData = {
     expenses: {},
     optionalExpenses: {},
     income: [],
-    savings: false,
+    savings: true
 };
 
 
@@ -56,13 +56,23 @@ function app () {
 };
 
 
-appData.moneyPerDay = (appData.budget / 30).toFixed();//POsle metoda vsegda skobki
-                                          //To fixed pustije skobki budet tseloe, 1 budet odin znak pose zapjatoi
+// appData.moneyPerDay = (appData.budget / 30).toFixed();//POsle metoda vsegda skobki
+//                                           //To fixed pustije skobki budet tseloe, 1 budet odin znak pose zapjatoi
+// //Tofixed sdelat vsegda string
+// alert("Day budget is: " + appData.moneyPerDay);
+// // console.log(appData.budget);
+// // console.log(appData.moneyPerDay);
+
+function detectDayBudget () {
+    appData.moneyPerDay = (appData.budget / 30).toFixed();//POsle metoda vsegda skobki
+    //To fixed pustije skobki budet tseloe, 1 budet odin znak pose zapjatoi
 //Tofixed sdelat vsegda string
 alert("Day budget is: " + appData.moneyPerDay);
-// console.log(appData.budget);
-// console.log(appData.moneyPerDay);
+};
+detectDayBudget();
 
+function detectLevel() {
+    
 
 if(appData.moneyPerDay < 100) {
     console.log("This is minimum budget")
@@ -73,4 +83,32 @@ if(appData.moneyPerDay < 100) {
 } else {
     console.log("Something goes wrong! ")
 }
+};
+
+detectLevel();
+
+function checkSavings () {
+    if (appData.savings == true) {
+        let save = +prompt("Hom much money you have saved?"),
+        percent = +prompt("With which percentage?");
+
+        appData.monthIncome = save/100/12*percent;
+        alert("Income in a Month from Your deposit is  " + appData.monthIncome);
+    }
+}
+
+checkSavings();
+console.log(appData);
+
+function chooseOptExpenses() {
+     appData.optionalExpenses.a1 = +prompt("Additional Costs for this Month?  ");
+     appData.optionalExpenses.a2 = +prompt("Additional Costs for this Month?  ");
+     appData.optionalExpenses.a3 = +prompt("Additional Costs for this Month?  ");
+     };   
+     chooseOptExpenses();
+
+    
+console.log(appData);
+
+
 
