@@ -158,10 +158,82 @@ if(appData.moneyPerDay < 100) {
 // }
 
 // showFirstMessage("Hello World ! ");
-let a = 3
- function addTwo(x) {
-   let ret = x + 2
-  return ret
+// let a = 3
+//  function addTwo(x) {
+//    let ret = x + 2
+//   return ret
+//  };
+//  let b = addTwo(a)
+//  console.log(b)
+
+ function first() {
+     setTimeout( function () {
+         console.log(1);
+     }, 500 );
+    }
+
+    function second() {
+        console.log(2);
+    }
+ first();
+ second();
+
+ //Callback funktion
+ function learnJs(lang, callback) {// V takom Vide nado delatj stobi funktsija sla odna za drugoi
+     console.log("I am studing" + lang);
+     callback();
+}
+
+// learnJs("JavaScript", function() {
+//     console.log("I have done the third lesson")
+// })
+
+function done() {
+    console.log("I have done the third lesson")
+}
+learnJs("JavaScript", done);//Pervoe znatsenie podstavili java script
+                     // A vtoroe prosto vipolnili funktsiju done
+
+ let options = {//Sozdaem Object s svoistvami
+   width: 1024,
+ lenght: 1024,
+ name: "test"
  };
- let b = addTwo(a)
- console.log(b)
+ console.log(options.name);
+
+ options.bool = false,//Dobavljaem novie svoistva objektu
+ options.colors = {
+     border: "black",
+     bg: "red"
+ };
+ delete options.bool;
+ 
+console.log(options);
+ for (let key in options) {
+     console.log("Property " + key + " is  " + options[key]);//Zdesj svoistvo zaprasivaem tserez 
+ }                                  //tserez kvadratnie skobki!!!
+console.log(Object.keys(options).length); 
+
+let arr = [1, 2, 3, 4, 5]; // Massivi zadaetsja tserez kvadratnie skobki
+arr[99] = 99; // Prisvoili 99 element v massive
+// for (let i = 0; i < arr.length; i++) {// Perebiraem massiv
+//     console.log(arr[i]);//vivodim v console znatsenie i
+// }
+
+// arr.pop()          //Pop uberet znatsenie s kontsa    POsle deistvija vsegda kruglie skobki
+// arr.push("5"); //Dobavili novoe znatsenie. Push dobavljaet
+// arr.shift();// Ubiraet pervij elemen
+// arr.unshift("1");
+
+arr.forEach(funktion(item, i, mass) {
+    console.log(i + ": " + item)
+};
+);    
+                //    Item= Znatseniju elementa  
+                //    I = Nomer Znatsenija 
+                //    arr = Massiv , kotorij mi ispoljzuem
+console.log(i + ": " + item);
+console.log(arr);
+
+
+
