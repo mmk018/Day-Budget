@@ -237,3 +237,70 @@ console.log(arr);
 
 
 
+
+
+
+let arr = [1, 2, 3, 4, 5];
+/* for (let i = 0; i < arr.lenght; i++) {
+    console.log(arr[i]);
+} */
+
+arr.forEach(function(item, i, mass) {
+    console.log(i + ": " + item + "(massive: " + mass +")");
+});
+
+//item- st
+console.log(arr);
+let mass = [1,3,4,6,7];
+
+for (let key of mass) {
+    console.log(key);
+}
+
+let ans = prompt("", ""),
+    arr = [];
+
+arr = ans.split(",");
+console.log(arr); 
+
+
+let arr = ["aawe", "zzz", "pp", "rqa"],
+    i = arr.join(", ");
+console.log(i);
+
+let arr = [1,15,4],
+    i = arr.sort(compareNum);
+
+function compareNum(a,b) {
+    return a-b;
+}
+console.log(arr);
+
+
+
+
+let test = 5;
+for(i = test; i < 10; i++) {
+    console.log(i)
+
+} 
+
+
+let test = 11;
+i = test;
+if (i < 10) {
+    console.log(i),
+    i++
+
+} else {
+    console.log("end Game")
+}
+
+let arr = [1,2.3,4,5];
+arr.forEach() {
+    console.log(arr)
+};
+
+let arr = [1,2.3,4,5];
+
+for (let i = 0; i > arr.lenght)

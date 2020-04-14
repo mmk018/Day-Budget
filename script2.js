@@ -71,19 +71,65 @@ let appData = {
       
           }
     },
-    chooseIncome: function () {
+    /* chooseIncome: function () {
         let items = prompt("What You will get from Bonus Income? (Please divide with ,)", "");
+
+
+
         appData.income = items.split(", ");//metod Slit yapisivaet vse vvedennojr tserey yapjatuju v massive
         appData.income.push(prompt("Mazbe somethink more"));  // push-dobavljaet v konets massiva
         appData.income.sort(); //i tak vse dannije v massive income mi otsortiruem po alfavitu
-    }
+    } */
+    chooseIncome: function () {
+        let items = prompt("What You will get from Bonus Income? (Please divide with ,)", "");
+            if (typeof(items) === "string" && typeof(items) !== "" && typeof(items) !== null) {
+                console.log("chooseIncome right");
+                appData.income = items.split(", ");//metod Slit yapisivaet vse vvedennojr tserey yapjatuju v massive
+                appData.income.push(prompt("Maybe somethink more"));  // push-dobavljaet v konets massiva
+                appData.income.sort(); //i tak vse dannije v massive income mi otsortiruem po alfavitu
+            } else {
+                console.log("chooseIncome wrong");
+    
+            }
+            
+        }
+        
 
        
 };
+//Test Below
+/* chooseIncome: function () {
+    let items = prompt("What You will get from Bonus Income? (Please divide with ,)", "");
+        if ( typeof(items) === "string" && typeof(items) != "" && typeof(items) != null) {
+            console.log("chooseIncome right");
+            appData.income = items.split(", ");//metod Slit yapisivaet vse vvedennojr tserey yapjatuju v massive
+            appData.income.push(prompt("Mazbe somethink more"));  // push-dobavljaet v konets massiva
+            appData.income.sort(); //i tak vse dannije v massive income mi otsortiruem po alfavitu
+        } else {
+            console.log("chooseIncome wrong");
+
+        }
+        
+    }
+    
 
 
 
-
+chooseExpenses: function () {
+        for (let i = 0; i < 2; i++) {
+            let a = prompt("Enter a required cost item this month", ""),
+                b = prompt("How much will it costs?", "");
+        
+            if ( typeof(a)=== "string" && typeof(a) != null && typeof(b) != null 
+            && a != "" && b != "" && a.length < 50) {
+                  console.log("done");
+                  appData.expenses[a] = b;  
+              } else {
+                  i--;
+            }
+        }
+    },
+ */
 
 
 
