@@ -82,7 +82,10 @@ let appData = {
     } */
     chooseIncome: function () {
         let items = prompt("What You will get from Bonus Income? (Please divide with ,)", "");
-            if (typeof(items) === "string" && typeof(items) !== "" && typeof(items) !== null) {
+            /* items = parseInt(items); */
+            if (typeof(items) === "string" && items !== "" && items !== null) {
+                console.log('type of items : ', typeof parseInt(items));
+                
                 console.log("chooseIncome right");
                 appData.income = items.split(", ");//metod Slit yapisivaet vse vvedennojr tserey yapjatuju v massive
                 appData.income.push(prompt("Maybe somethink more"));  // push-dobavljaet v konets massiva
@@ -97,6 +100,18 @@ let appData = {
 
        
 };
+function showBonus () {
+    appData.income.forEach(function(item, i) {
+        switch (i) {
+            case 0 : break;
+            default : alert("Bonus Income: " + item);
+        }
+    })
+}
+showBonus();
+
+
+
 //Test Below
 /* chooseIncome: function () {
     let items = prompt("What You will get from Bonus Income? (Please divide with ,)", "");
