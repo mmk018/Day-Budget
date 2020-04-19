@@ -45,13 +45,13 @@ let appData = {
     detectLevel: function () {
 
         if(appData.moneyPerDay < 100) {
-            console.log("This is minimum budget")
+            console.log("This is minimum budget");
         } else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
             console.log("This is medium budget! ");
         } else if (appData.moneyPerDay > 2000) {
             console.log("This is high budget!!");
         } else {
-            console.log("Something goes wrong! ")
+            console.log("Something goes wrong! ");
         }
     },
     checkSavings: function () {
@@ -82,11 +82,19 @@ let appData = {
     } */
     chooseIncome: function () {
         let items = prompt("What You will get from Bonus Income? (Please divide with ,)", "");
-            if (typeof(items) === "string" && typeof(items) !== "" && typeof(items) !== null) {
+            if (typeof(items) === "string" && typeof(items) != "" && typeof(items) != null) {
                 console.log("chooseIncome right");
                 appData.income = items.split(", ");//metod Slit yapisivaet vse vvedennojr tserey yapjatuju v massive
                 appData.income.push(prompt("Maybe somethink more"));  // push-dobavljaet v konets massiva
                 appData.income.sort(); //i tak vse dannije v massive income mi otsortiruem po alfavitu
+                appData.income.forEach(function(item, i) {
+                    switch (i) {
+                        case 0 : break;
+                        default : alert("Bonus Income:" + item);
+                        
+                    }
+                    
+                });
             } else {
                 console.log("chooseIncome wrong");
     
@@ -97,6 +105,34 @@ let appData = {
 
        
 };
+
+/* let appDataincome = [1, 2, 8 , 4, 5];
+
+
+appDataincome.forEach(function(item, i) {
+    switch (i) {
+        case 0 : break;
+        default : console.log("Bonus Income:" + item);
+        
+    }
+    
+}); */
+
+/* let appData = {
+    name: "ivan",
+    age: 25
+}; */
+function svodka () {
+    for (let key in appData) {
+        console.log( " Item  " + key + " have value  " + appData[key]);
+    }
+}
+
+
+
+/* for (let key in appData) {
+    console.log( " Item  " + key + " have value  " + appData[key]);
+} */
 //Test Below
 /* chooseIncome: function () {
     let items = prompt("What You will get from Bonus Income? (Please divide with ,)", "");
