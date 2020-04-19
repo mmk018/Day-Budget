@@ -1,0 +1,23 @@
+{
+  "name": "udemyjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "array.js",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "serve": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmk018/Day-Budget.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmk018/Day-Budget/issues"
+  },
+  "homepage": "https://github.com/mmk018/Day-Budget#readme"
+}

@@ -82,7 +82,14 @@ let appData = {
     } */
     chooseIncome: function () {
         let items = prompt("What You will get from Bonus Income? (Please divide with ,)", "");
+<<<<<<< HEAD
             if (typeof(items) === "string" && typeof(items) != "" && typeof(items) != null) {
+=======
+            /* items = parseInt(items); */
+            if (typeof(items) === "string" && items !== "" && items !== null) {
+                console.log('type of items : ', typeof parseInt(items));
+                
+>>>>>>> 7f33b624d9d8326b872b8efd1a8d29ca25ffb213
                 console.log("chooseIncome right");
                 appData.income = items.split(", ");//metod Slit yapisivaet vse vvedennojr tserey yapjatuju v massive
                 appData.income.push(prompt("Maybe somethink more"));  // push-dobavljaet v konets massiva
@@ -105,6 +112,7 @@ let appData = {
 
        
 };
+<<<<<<< HEAD
 
 /* let appDataincome = [1, 2, 8 , 4, 5];
 
@@ -133,6 +141,20 @@ function svodka () {
 /* for (let key in appData) {
     console.log( " Item  " + key + " have value  " + appData[key]);
 } */
+=======
+function showBonus () {
+    appData.income.forEach(function(item, i) {
+        switch (i) {
+            case 0 : break;
+            default : alert("Bonus Income: " + item);
+        }
+    })
+}
+showBonus();
+
+
+
+>>>>>>> 7f33b624d9d8326b872b8efd1a8d29ca25ffb213
 //Test Below
 /* chooseIncome: function () {
     let items = prompt("What You will get from Bonus Income? (Please divide with ,)", "");
